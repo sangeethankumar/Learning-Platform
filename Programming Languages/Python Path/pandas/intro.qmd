@@ -1,0 +1,16 @@
+---
+title: Pandas Introduction
+categories: [Pandas, Data Analysis, Python Path]
+---
+
+# Pandas Introduction
+
+Pandas is a Python library for handling tabular data.
+
+```python
+import pandas as pd
+
+data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}
+df = pd.DataFrame(data)
+print(df)
+```

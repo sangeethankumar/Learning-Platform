@@ -1,0 +1,8 @@
+---
+title: DataFrame Basics
+categories: [Pandas, DataFrame, Python Path]
+---
+
+# DataFrames
+
+DataFrames are 2D tables in Pandas...

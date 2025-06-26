@@ -1,0 +1,16 @@
+---
+page-layout: full
+---
+
+<div class="hero-banner">
+  <h1>Welcome to the Learning Platform</h1>
+  <p>Simple, beautiful, and effective way to learn.</p>
+</div>
+
+::: {.callout-note}
+### 📚 Start Learning Now
+
+- Topic A
+- Topic B
+
+:::

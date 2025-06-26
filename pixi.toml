@@ -1,0 +1,15 @@
+[workspace]
+authors = ["Sangeetha Nandakumar <98574336+sangeethankumar@users.noreply.github.com>"]
+channels = ["conda-forge"]
+name = "Learning Platform"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.12.*"
+numpy = ">=2.3.0,<3"
+matplotlib = ">=3.10.3,<4"
+pandas = ">=2.3.0,<3"
+"ruamel.yaml" = ">=0.18.14,<0.19"

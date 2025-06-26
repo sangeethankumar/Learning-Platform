@@ -1,0 +1,33 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Learning Platform"
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+
+  sidebar:
+    style: floating
+    collapse-level: 1
+    search: true
+    contents: auto
+
+format:
+  html:
+    theme:
+      light: lux
+      dark: cyborg
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-tools: true
+    css: styles.css
+    include-after-body: custom-scripts.html
+
+strict: true
