@@ -1,7 +1,6 @@
 _site/
 .quarto/
 /.quarto/
-docs/
 
 # pixi environments
 .pixi
