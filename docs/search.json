@@ -4,10 +4,36 @@
     "href": "categories.html",
     "title": "Categories",
     "section": "",
-    "text": "About\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataFrame Basics\n\n\n\nLanguages\n\nPython Path\n\nPandas\n\nDataFrame\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to Matlab\n\n\n\nLanguages\n\nMatlab\n\nBasics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to Python\n\n\n\nLanguages\n\nPython Path\n\nBasics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to R\n\n\n\nLanguages\n\nR\n\nBasics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMatplotlib Introduction\n\n\n\nLanguages\n\nPython Path\n\nMatplotlib\n\nVisualization\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNumPy Introduction\n\n\n\nLanguages\n\nPython Path\n\nNumPy\n\nArrays\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPandas Introduction\n\n\n\nLanguages\n\nPython Path\n\nPandas\n\nData Analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n📚 Start Learning Now\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "About\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataFrame Basics\n\n\n\nLanguages\n\nPython Path\n\nPandas\n\nDataFrame\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to Matlab\n\n\n\nLanguages\n\nMatlab\n\nBasics\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to Python\n\n\n\nLanguages\n\nPython Path\n\nBasics\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to R\n\n\n\nLanguages\n\nR\n\nBasics\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nMatplotlib Introduction\n\n\n\nLanguages\n\nPython Path\n\nMatplotlib\n\nVisualization\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nNumPy Introduction\n\n\n\nLanguages\n\nPython Path\n\nNumPy\n\nArrays\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nPandas Introduction\n\n\n\nLanguages\n\nPython Path\n\nPandas\n\nData Analysis\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\n📚 Start Learning Now\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Categories"
+    ]
+  },
+  {
+    "objectID": "Programming Languages/R Path/intro.html",
+    "href": "Programming Languages/R Path/intro.html",
+    "title": "Intro to R",
+    "section": "",
+    "text": "Let us learn R here",
+    "crumbs": [
+      "Home",
+      "Programming Languages",
+      "R Path",
+      "Intro to R"
+    ]
+  },
+  {
+    "objectID": "Programming Languages/Python Path/intro.html",
+    "href": "Programming Languages/Python Path/intro.html",
+    "title": "Intro to Python",
+    "section": "",
+    "text": "Let us learn Python here",
+    "crumbs": [
+      "Home",
+      "Programming Languages",
+      "Python Path",
+      "Intro to Python"
     ]
   },
   {
@@ -75,6 +101,19 @@
       "Python Path",
       "Pandas",
       "Pandas Introduction"
+    ]
+  },
+  {
+    "objectID": "Programming Languages/Matlab Path/intro.html",
+    "href": "Programming Languages/Matlab Path/intro.html",
+    "title": "Intro to Matlab",
+    "section": "",
+    "text": "Let us learn Matlab here",
+    "crumbs": [
+      "Home",
+      "Programming Languages",
+      "Matlab Path",
+      "Intro to Matlab"
     ]
   },
   {
