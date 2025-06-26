@@ -1,4 +1,8 @@
 ---
 title: Intro to Matlab
 categories: [Basics]
+author: Jane
+date: 24-06-2025
 ---
+
+Let us learn Matlab here

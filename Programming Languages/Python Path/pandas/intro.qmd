@@ -1,6 +1,8 @@
 ---
 title: Pandas Introduction
 categories: [Pandas, Data Analysis, Python Path]
+author: Jane
+date: 24-06-2025
 ---
 
 # Pandas Introduction

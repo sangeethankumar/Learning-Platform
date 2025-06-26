@@ -1,6 +1,8 @@
 ---
 title: DataFrame Basics
 categories: [Pandas, DataFrame, Python Path]
+author: Jane
+date: 24-06-2025
 ---
 
 # DataFrames

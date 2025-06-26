@@ -1,4 +1,8 @@
 ---
 title: Intro to R
 categories: [Basics]
+author: Jane
+date: 24-06-2025
 ---
+
+Let us learn R here

@@ -1,6 +1,8 @@
 ---
 title: Matplotlib Introduction
 categories: [Matplotlib, Visualization, Python Path]
+author: Jane
+date: 24-06-2025
 ---
 
 # Matplotlib Basics
