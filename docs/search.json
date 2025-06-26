@@ -1,0 +1,87 @@
+[
+  {
+    "objectID": "categories.html",
+    "href": "categories.html",
+    "title": "Categories",
+    "section": "",
+    "text": "About\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataFrame Basics\n\n\n\nLanguages\n\nPython Path\n\nPandas\n\nDataFrame\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to Matlab\n\n\n\nLanguages\n\nMatlab\n\nBasics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to Python\n\n\n\nLanguages\n\nPython Path\n\nBasics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to R\n\n\n\nLanguages\n\nR\n\nBasics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMatplotlib Introduction\n\n\n\nLanguages\n\nPython Path\n\nMatplotlib\n\nVisualization\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNumPy Introduction\n\n\n\nLanguages\n\nPython Path\n\nNumPy\n\nArrays\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPandas Introduction\n\n\n\nLanguages\n\nPython Path\n\nPandas\n\nData Analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n📚 Start Learning Now\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Categories"
+    ]
+  },
+  {
+    "objectID": "Programming Languages/Python Path/pandas/DataFrame.html",
+    "href": "Programming Languages/Python Path/pandas/DataFrame.html",
+    "title": "DataFrame Basics",
+    "section": "",
+    "text": "DataFrames\nDataFrames are 2D tables in Pandas…",
+    "crumbs": [
+      "Home",
+      "Programming Languages",
+      "Python Path",
+      "Pandas",
+      "DataFrame Basics"
+    ]
+  },
+  {
+    "objectID": "Programming Languages/Python Path/numpy/intro.html",
+    "href": "Programming Languages/Python Path/numpy/intro.html",
+    "title": "NumPy Introduction",
+    "section": "",
+    "text": "NumPy Introduction\nNumPy is the foundation for numerical computing in Python.\nimport numpy as np\n\narr = np.array([1, 2, 3, 4])\nprint(arr)",
+    "crumbs": [
+      "Home",
+      "Programming Languages",
+      "Python Path",
+      "Numpy",
+      "NumPy Introduction"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
+  },
+  {
+    "objectID": "Programming Languages/Python Path/matplotlib/intro.html",
+    "href": "Programming Languages/Python Path/matplotlib/intro.html",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "Matplotlib Basics\nSimple plots in Matplotlib:\nimport matplotlib.pyplot as plt\n\nplt.plot([1, 2, 3], [4, 5, 6])\nplt.show()",
+    "crumbs": [
+      "Home",
+      "Programming Languages",
+      "Python Path",
+      "Matplotlib",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "Programming Languages/Python Path/pandas/intro.html",
+    "href": "Programming Languages/Python Path/pandas/intro.html",
+    "title": "Pandas Introduction",
+    "section": "",
+    "text": "Pandas Introduction\nPandas is a Python library for handling tabular data.\nimport pandas as pd\n\ndata = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}\ndf = pd.DataFrame(data)\nprint(df)",
+    "crumbs": [
+      "Home",
+      "Programming Languages",
+      "Python Path",
+      "Pandas",
+      "Pandas Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "Code\n\n\n\n\n\n\n\nWelcome to the Learning Platform\n\n\nSimple, beautiful, and effective way to learn.\n\n\n\n\n\n\n\n\n📚 Start Learning Now\n\n\n\n\nTopic A\nTopic B"
+  }
+]
