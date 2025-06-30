@@ -1,0 +1,77 @@
+---
+title: Matplotlib Introduction
+categories: [SWE, Python Path]
+author: Jane
+date: 30-06-2025
+---
+
+# How to Set Up and Share a Python Environment Using Pixi
+
+## Goal
+Set up a reproducible Python environment using Pixi and share it with others via `pixi.toml` and `pixi.lock`.
+
+## Step 1: Install Pixi
+
+1. Go to the [official Pixi installation page](https://pixi.sh/latest/#installation).
+2. On Windows, run:
+
+```bash
+winget install prefix-dev.pixi
+```
+
+3. Verify installation:
+
+```bash
+pixi --version
+```
+
+## Step 2: Initialize a Pixi Environment
+
+```bash
+pixi init
+```
+
+This command creates a `pixi.toml` file in the current directory.
+
+## Step 3: Add Python and pip
+
+```bash
+pixi add python pip
+```
+
+This installs Python and pip from the `conda-forge` ecosystem.
+
+## Step 4: Enter the Environment
+
+```bash
+pixi shell
+```
+
+You are now inside the managed environment.
+
+## Step 5: Add Packages
+
+Example:
+
+```bash
+pixi add numpy matplotlib
+```
+
+Or from PyPI:
+
+```bash
+pixi add --pypi streamlit
+```
+
+## Step 6: Share the Environment
+
+1. Commit or send the `pixi.toml` and `pixi.lock` files.
+2. Others can recreate the same environment by running:
+
+```bash
+pixi install
+```
+
+## Summary
+
+You have successfully created and shared a Python environment using Pixi.

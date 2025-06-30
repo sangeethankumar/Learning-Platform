@@ -1,0 +1,122 @@
+---
+title: Matplotlib Introduction
+categories: [SWE, Python Path, Data Analysis]
+author: Jane
+date: 30-06-2025
+---
+
+# Learn Pixi by Managing a Python Environment for Data Analysis
+
+## Goal
+Learn how to use Pixi to create, manage, and reproduce a Python environment using only Pixi’s core features.
+
+## What You Will Learn
+
+- How to install and verify Pixi
+- How to create a new environment
+- How to install packages from conda-forge and PyPI
+- How to activate the environment and run commands
+- How to export and share the environment
+
+## Step 1: Install Pixi
+
+Visit [pixi.sh](https://pixi.sh/latest/#installation) and follow the instructions for your operating system.
+
+Example for Windows:
+
+```bash
+winget install prefix-dev.pixi
+```
+
+Verify installation:
+
+```bash
+pixi --version
+```
+
+## Step 2: Create a New Pixi Environment
+
+Create a new project directory:
+
+```bash
+mkdir my-data-env
+cd my-data-env
+pixi init
+```
+
+This creates a `pixi.toml` file where your environment is defined.
+
+## Step 3: Add Python and pip
+
+```bash
+pixi add python pip
+```
+
+Verify Python is available:
+
+```bash
+pixi shell
+python --version
+pip --version
+```
+
+Type `exit` to leave the shell.
+
+## Step 4: Add Data Packages
+
+Install useful packages:
+
+```bash
+pixi add pandas matplotlib
+```
+
+Install a PyPI-only package (such as `tabulate`):
+
+```bash
+pixi add --pypi tabulate
+```
+
+View environment info:
+
+```bash
+pixi info
+```
+
+## Step 5: Test the Environment
+
+Create a file `test.py`:
+
+```python
+import pandas as pd
+from tabulate import tabulate
+
+df = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})
+print(tabulate(df, headers='keys', tablefmt='pretty'))
+```
+
+Run it inside the environment:
+
+```bash
+pixi run python test.py
+```
+
+## Step 6: Share or Reproduce the Environment
+
+To share:
+- Send `pixi.toml` and `pixi.lock`
+
+To reproduce on another machine:
+
+```bash
+pixi install
+pixi run python test.py
+```
+
+## Summary
+
+You have now:
+
+- Created a Pixi-managed environment
+- Installed packages from both conda and PyPI
+- Used `pixi run` and `pixi shell`
+- Reproduced the environment with lock files
