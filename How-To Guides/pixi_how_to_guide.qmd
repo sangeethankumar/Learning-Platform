@@ -1,5 +1,5 @@
 ---
-title: Matplotlib Introduction
+title: Setup and Share Python Environment Using Pixi
 categories: [SWE, Python Path]
 author: Jane
 date: 30-06-2025

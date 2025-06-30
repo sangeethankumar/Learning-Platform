@@ -1,5 +1,5 @@
 ---
-title: Matplotlib Introduction
+title: Managing a Python Environment for Data Analysis
 categories: [SWE, Python Path, Data Analysis]
 author: Jane
 date: 30-06-2025
