@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Learning Platform</title>
+<title>Categories – Learning Platform</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,6 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -106,7 +108,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -310,7 +370,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./about.html">About</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./categories.html">Categories</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -332,13 +392,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link active">
+  <a href="./about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./categories.html" class="sidebar-item-text sidebar-link">
+  <a href="./categories.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Categories</span></a>
   </div>
 </li>
@@ -466,16 +526,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div><div class="category" data-category="QXJyYXlz">Arrays <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QmFzaWNz">Basics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="RGF0YSUyMEFuYWx5c2lz">Data Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGF0YUZyYW1l">DataFrame <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFuZ3VhZ2Vz">Languages <span class="quarto-category-count">(7)</span></div><div class="category" data-category="TWF0bGFi">Matlab <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWF0cGxvdGxpYg==">Matplotlib <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TnVtUHk=">NumPy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGFuZGFz">Pandas <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UHl0aG9uJTIwUGF0aA==">Python Path <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VmlzdWFsaXphdGlvbg==">Visualization <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">About</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Categories</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -492,13 +552,303 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>About this site</p>
+
 
 
 <!-- -->
 
 
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1751270248979" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="thumbnail"><a href="./about.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./about.html" class="no-external">About</a>
+</h3>
+<div class="delink listing-description"><a href="./about.html" class="no-external">
+About this site
+</a></div>
+</div>
+<div class="metadata">
+<a href="./about.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="TGFuZ3VhZ2VzJTJDUHl0aG9uJTIwUGF0aCUyQ1BhbmRhcyUyQ0RhdGFGcmFtZQ==" data-listing-date-sort="1796515200000" data-listing-file-modified-sort="1751270248979" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
+<div class="thumbnail"><a href="./Programming Languages/Python Path/pandas/DataFrame.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./Programming Languages/Python Path/pandas/DataFrame.html" class="no-external">DataFrame Basics</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGFuZ3VhZ2Vz'); return false;">Languages</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9uJTIwUGF0aA=='); return false;">Python Path</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UGFuZGFz'); return false;">Pandas</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YUZyYW1l'); return false;">DataFrame</div>
+
+</div>
+<div class="delink listing-description"><a href="./Programming Languages/Python Path/pandas/DataFrame.html" class="no-external">
+DataFrames are 2D tables in Pandas…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./Programming Languages/Python Path/pandas/DataFrame.html" class="no-external">
+<div class="listing-date">
+Dec 6, 2026
+</div>
+<div class="listing-author">
+Jane
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="TGFuZ3VhZ2VzJTJDTWF0bGFiJTJDQmFzaWNz" data-listing-date-sort="1796515200000" data-listing-file-modified-sort="1751270248978" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="thumbnail"><a href="./Programming Languages/Matlab Path/intro.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./Programming Languages/Matlab Path/intro.html" class="no-external">Intro to Matlab</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGFuZ3VhZ2Vz'); return false;">Languages</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWF0bGFi'); return false;">Matlab</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWNz'); return false;">Basics</div>
+
+</div>
+<div class="delink listing-description"><a href="./Programming Languages/Matlab Path/intro.html" class="no-external">
+Let us learn Matlab here
+</a></div>
+</div>
+<div class="metadata">
+<a href="./Programming Languages/Matlab Path/intro.html" class="no-external">
+<div class="listing-date">
+Dec 6, 2026
+</div>
+<div class="listing-author">
+Jane
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="TGFuZ3VhZ2VzJTJDUHl0aG9uJTIwUGF0aCUyQ0Jhc2ljcw==" data-listing-date-sort="1796515200000" data-listing-file-modified-sort="1751270248979" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="thumbnail"><a href="./Programming Languages/Python Path/intro.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./Programming Languages/Python Path/intro.html" class="no-external">Intro to Python</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGFuZ3VhZ2Vz'); return false;">Languages</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9uJTIwUGF0aA=='); return false;">Python Path</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWNz'); return false;">Basics</div>
+
+</div>
+<div class="delink listing-description"><a href="./Programming Languages/Python Path/intro.html" class="no-external">
+Let us learn Python here
+</a></div>
+</div>
+<div class="metadata">
+<a href="./Programming Languages/Python Path/intro.html" class="no-external">
+<div class="listing-date">
+Dec 6, 2026
+</div>
+<div class="listing-author">
+Jane
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="TGFuZ3VhZ2VzJTJDUiUyQ0Jhc2ljcw==" data-listing-date-sort="1796515200000" data-listing-file-modified-sort="1751270248979" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="thumbnail"><a href="./Programming Languages/R Path/intro.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./Programming Languages/R Path/intro.html" class="no-external">Intro to R</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGFuZ3VhZ2Vz'); return false;">Languages</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWNz'); return false;">Basics</div>
+
+</div>
+<div class="delink listing-description"><a href="./Programming Languages/R Path/intro.html" class="no-external">
+Let us learn R here
+</a></div>
+</div>
+<div class="metadata">
+<a href="./Programming Languages/R Path/intro.html" class="no-external">
+<div class="listing-date">
+Dec 6, 2026
+</div>
+<div class="listing-author">
+Jane
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="TGFuZ3VhZ2VzJTJDUHl0aG9uJTIwUGF0aCUyQ01hdHBsb3RsaWIlMkNWaXN1YWxpemF0aW9u" data-listing-date-sort="1796515200000" data-listing-file-modified-sort="1751270248979" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="12">
+<div class="thumbnail"><a href="./Programming Languages/Python Path/matplotlib/intro.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./Programming Languages/Python Path/matplotlib/intro.html" class="no-external">Matplotlib Introduction</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGFuZ3VhZ2Vz'); return false;">Languages</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9uJTIwUGF0aA=='); return false;">Python Path</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWF0cGxvdGxpYg=='); return false;">Matplotlib</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VmlzdWFsaXphdGlvbg=='); return false;">Visualization</div>
+
+</div>
+<div class="delink listing-description"><a href="./Programming Languages/Python Path/matplotlib/intro.html" class="no-external">
+Simple plots in Matplotlib:
+</a></div>
+</div>
+<div class="metadata">
+<a href="./Programming Languages/Python Path/matplotlib/intro.html" class="no-external">
+<div class="listing-date">
+Dec 6, 2026
+</div>
+<div class="listing-author">
+Jane
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="TGFuZ3VhZ2VzJTJDUHl0aG9uJTIwUGF0aCUyQ051bVB5JTJDQXJyYXlz" data-listing-date-sort="1796515200000" data-listing-file-modified-sort="1751270248979" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<div class="thumbnail"><a href="./Programming Languages/Python Path/numpy/intro.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./Programming Languages/Python Path/numpy/intro.html" class="no-external">NumPy Introduction</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGFuZ3VhZ2Vz'); return false;">Languages</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9uJTIwUGF0aA=='); return false;">Python Path</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TnVtUHk='); return false;">NumPy</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QXJyYXlz'); return false;">Arrays</div>
+
+</div>
+<div class="delink listing-description"><a href="./Programming Languages/Python Path/numpy/intro.html" class="no-external">
+NumPy is the foundation for numerical computing in Python.
+</a></div>
+</div>
+<div class="metadata">
+<a href="./Programming Languages/Python Path/numpy/intro.html" class="no-external">
+<div class="listing-date">
+Dec 6, 2026
+</div>
+<div class="listing-author">
+Jane
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="TGFuZ3VhZ2VzJTJDUHl0aG9uJTIwUGF0aCUyQ1BhbmRhcyUyQ0RhdGElMjBBbmFseXNpcw==" data-listing-date-sort="1796515200000" data-listing-file-modified-sort="1751270248979" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
+<div class="thumbnail"><a href="./Programming Languages/Python Path/pandas/intro.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./Programming Languages/Python Path/pandas/intro.html" class="no-external">Pandas Introduction</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGFuZ3VhZ2Vz'); return false;">Languages</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9uJTIwUGF0aA=='); return false;">Python Path</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UGFuZGFz'); return false;">Pandas</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMEFuYWx5c2lz'); return false;">Data Analysis</div>
+
+</div>
+<div class="delink listing-description"><a href="./Programming Languages/Python Path/pandas/intro.html" class="no-external">
+Pandas is a Python library for handling tabular data.
+</a></div>
+</div>
+<div class="metadata">
+<a href="./Programming Languages/Python Path/pandas/intro.html" class="no-external">
+<div class="listing-date">
+Dec 6, 2026
+</div>
+<div class="listing-author">
+Jane
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1751270248989" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
+<div class="thumbnail"><a href="./index.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./index.html" class="no-external">📚 Start Learning Now</a>
+</h3>
+<div class="delink listing-description"><a href="./index.html" class="no-external">
+
+Simple, beautiful, and effective way to learn.
+
+</a></div>
+</div>
+<div class="metadata">
+<a href="./index.html" class="no-external">
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script>
 // Fade-in on page load
 document.addEventListener("DOMContentLoaded", function() {
@@ -974,10 +1324,11 @@ document.addEventListener("scroll", function() {
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "About"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>About this site</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Categories"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  type: default</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: true</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
