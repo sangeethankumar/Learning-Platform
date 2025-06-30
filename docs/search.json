@@ -1,42 +1,298 @@
 [
   {
-    "objectID": "Programming Languages/R Path/intro.html",
-    "href": "Programming Languages/R Path/intro.html",
-    "title": "Intro to R",
-    "section": "",
-    "text": "Let us learn R here",
-    "crumbs": [
-      "Home",
-      "Programming Languages",
-      "R Path",
-      "Intro to R"
-    ]
-  },
-  {
-    "objectID": "Programming Languages/Python Path/numpy/intro.html",
-    "href": "Programming Languages/Python Path/numpy/intro.html",
-    "title": "NumPy Introduction",
-    "section": "",
-    "text": "NumPy Introduction\nNumPy is the foundation for numerical computing in Python.\nimport numpy as np\n\narr = np.array([1, 2, 3, 4])\nprint(arr)",
-    "crumbs": [
-      "Home",
-      "Programming Languages",
-      "Python Path",
-      "Numpy",
-      "NumPy Introduction"
-    ]
-  },
-  {
-    "objectID": "Programming Languages/Python Path/matplotlib/intro.html",
-    "href": "Programming Languages/Python Path/matplotlib/intro.html",
+    "objectID": "Tutorials/pixi_tutorial.html",
+    "href": "Tutorials/pixi_tutorial.html",
     "title": "Matplotlib Introduction",
     "section": "",
-    "text": "Matplotlib Basics\nSimple plots in Matplotlib:\nimport matplotlib.pyplot as plt\n\nplt.plot([1, 2, 3], [4, 5, 6])\nplt.show()",
+    "text": "Learn how to use Pixi to create, manage, and reproduce a Python environment using only Pixi’s core features.\n\n\n\n\nHow to install and verify Pixi\nHow to create a new environment\nHow to install packages from conda-forge and PyPI\nHow to activate the environment and run commands\nHow to export and share the environment\n\n\n\n\nVisit pixi.sh and follow the instructions for your operating system.\nExample for Windows:\nwinget install prefix-dev.pixi\nVerify installation:\npixi --version\n\n\n\nCreate a new project directory:\nmkdir my-data-env\ncd my-data-env\npixi init\nThis creates a pixi.toml file where your environment is defined.\n\n\n\npixi add python pip\nVerify Python is available:\npixi shell\npython --version\npip --version\nType exit to leave the shell.\n\n\n\nInstall useful packages:\npixi add pandas matplotlib\nInstall a PyPI-only package (such as tabulate):\npixi add --pypi tabulate\nView environment info:\npixi info\n\n\n\nCreate a file test.py:\nimport pandas as pd\nfrom tabulate import tabulate\n\ndf = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})\nprint(tabulate(df, headers='keys', tablefmt='pretty'))\nRun it inside the environment:\npixi run python test.py\n\n\n\nTo share: - Send pixi.toml and pixi.lock\nTo reproduce on another machine:\npixi install\npixi run python test.py\n\n\n\nYou have now:\n\nCreated a Pixi-managed environment\nInstalled packages from both conda and PyPI\nUsed pixi run and pixi shell\nReproduced the environment with lock files",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "Tutorials/pixi_tutorial.html#goal",
+    "href": "Tutorials/pixi_tutorial.html#goal",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "Learn how to use Pixi to create, manage, and reproduce a Python environment using only Pixi’s core features.",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "Tutorials/pixi_tutorial.html#what-you-will-learn",
+    "href": "Tutorials/pixi_tutorial.html#what-you-will-learn",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "How to install and verify Pixi\nHow to create a new environment\nHow to install packages from conda-forge and PyPI\nHow to activate the environment and run commands\nHow to export and share the environment",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "Tutorials/pixi_tutorial.html#step-1-install-pixi",
+    "href": "Tutorials/pixi_tutorial.html#step-1-install-pixi",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "Visit pixi.sh and follow the instructions for your operating system.\nExample for Windows:\nwinget install prefix-dev.pixi\nVerify installation:\npixi --version",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "Tutorials/pixi_tutorial.html#step-2-create-a-new-pixi-environment",
+    "href": "Tutorials/pixi_tutorial.html#step-2-create-a-new-pixi-environment",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "Create a new project directory:\nmkdir my-data-env\ncd my-data-env\npixi init\nThis creates a pixi.toml file where your environment is defined.",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "Tutorials/pixi_tutorial.html#step-3-add-python-and-pip",
+    "href": "Tutorials/pixi_tutorial.html#step-3-add-python-and-pip",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "pixi add python pip\nVerify Python is available:\npixi shell\npython --version\npip --version\nType exit to leave the shell.",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "Tutorials/pixi_tutorial.html#step-4-add-data-packages",
+    "href": "Tutorials/pixi_tutorial.html#step-4-add-data-packages",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "Install useful packages:\npixi add pandas matplotlib\nInstall a PyPI-only package (such as tabulate):\npixi add --pypi tabulate\nView environment info:\npixi info",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "Tutorials/pixi_tutorial.html#step-5-test-the-environment",
+    "href": "Tutorials/pixi_tutorial.html#step-5-test-the-environment",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "Create a file test.py:\nimport pandas as pd\nfrom tabulate import tabulate\n\ndf = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})\nprint(tabulate(df, headers='keys', tablefmt='pretty'))\nRun it inside the environment:\npixi run python test.py",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "Tutorials/pixi_tutorial.html#step-6-share-or-reproduce-the-environment",
+    "href": "Tutorials/pixi_tutorial.html#step-6-share-or-reproduce-the-environment",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "To share: - Send pixi.toml and pixi.lock\nTo reproduce on another machine:\npixi install\npixi run python test.py",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "Tutorials/pixi_tutorial.html#summary",
+    "href": "Tutorials/pixi_tutorial.html#summary",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "You have now:\n\nCreated a Pixi-managed environment\nInstalled packages from both conda and PyPI\nUsed pixi run and pixi shell\nReproduced the environment with lock files",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "Programming Languages/Matlab Path/intro.html",
+    "href": "Programming Languages/Matlab Path/intro.html",
+    "title": "Intro to Matlab",
+    "section": "",
+    "text": "Let us learn Matlab here",
+    "crumbs": [
+      "Home",
+      "Programming Languages",
+      "Matlab Path",
+      "Intro to Matlab"
+    ]
+  },
+  {
+    "objectID": "Programming Languages/Python Path/intro.html",
+    "href": "Programming Languages/Python Path/intro.html",
+    "title": "Intro to Python",
+    "section": "",
+    "text": "Let us learn Python here",
     "crumbs": [
       "Home",
       "Programming Languages",
       "Python Path",
-      "Matplotlib",
+      "Intro to Python"
+    ]
+  },
+  {
+    "objectID": "Programming Languages/Python Path/pandas/DataFrame.html",
+    "href": "Programming Languages/Python Path/pandas/DataFrame.html",
+    "title": "DataFrame Basics",
+    "section": "",
+    "text": "DataFrames\nDataFrames are 2D tables in Pandas…",
+    "crumbs": [
+      "Home",
+      "Programming Languages",
+      "Python Path",
+      "Pandas",
+      "DataFrame Basics"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "Code\n\n\n\n\n\n\n\nWelcome to the Learning Platform\n\n\nSimple, beautiful, and effective way to learn.\n\n\n\n\n\n\n\n\n📚 Start Learning Now\n\n\n\n\nTopic A\nTopic B"
+  },
+  {
+    "objectID": "categories.html",
+    "href": "categories.html",
+    "title": "Categories",
+    "section": "",
+    "text": "About\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataFrame Basics\n\n\n\nLanguages\n\nPython Path\n\nPandas\n\nDataFrame\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to Matlab\n\n\n\nLanguages\n\nMatlab\n\nBasics\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to Python\n\n\n\nLanguages\n\nPython Path\n\nBasics\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to R\n\n\n\nLanguages\n\nR\n\nBasics\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nMatplotlib Introduction\n\n\n\nHow-To\n\nSWE\n\nPython Path\n\n\n\n\n\n\n\n\n\nJun 6, 2027\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nMatplotlib Introduction\n\n\n\nLanguages\n\nPython Path\n\nMatplotlib\n\nVisualization\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nMatplotlib Introduction\n\n\n\nTutorials\n\nSWE\n\nPython Path\n\nData Analysis\n\n\n\n\n\n\n\n\n\nJun 6, 2027\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nNumPy Introduction\n\n\n\nLanguages\n\nPython Path\n\nNumPy\n\nArrays\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nPandas Introduction\n\n\n\nLanguages\n\nPython Path\n\nPandas\n\nData Analysis\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\n📚 Start Learning Now\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Categories"
+    ]
+  },
+  {
+    "objectID": "How-To Guides/pixi_how_to_guide.html",
+    "href": "How-To Guides/pixi_how_to_guide.html",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "Set up a reproducible Python environment using Pixi and share it with others via pixi.toml and pixi.lock.\n\n\n\n\nGo to the official Pixi installation page.\nOn Windows, run:\n\nwinget install prefix-dev.pixi\n\nVerify installation:\n\npixi --version\n\n\n\npixi init\nThis command creates a pixi.toml file in the current directory.\n\n\n\npixi add python pip\nThis installs Python and pip from the conda-forge ecosystem.\n\n\n\npixi shell\nYou are now inside the managed environment.\n\n\n\nExample:\npixi add numpy matplotlib\nOr from PyPI:\npixi add --pypi streamlit\n\n\n\n\nCommit or send the pixi.toml and pixi.lock files.\nOthers can recreate the same environment by running:\n\npixi install\n\n\n\nYou have successfully created and shared a Python environment using Pixi.",
+    "crumbs": [
+      "Home",
+      "How-To Guides",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "How-To Guides/pixi_how_to_guide.html#goal",
+    "href": "How-To Guides/pixi_how_to_guide.html#goal",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "Set up a reproducible Python environment using Pixi and share it with others via pixi.toml and pixi.lock.",
+    "crumbs": [
+      "Home",
+      "How-To Guides",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "How-To Guides/pixi_how_to_guide.html#step-1-install-pixi",
+    "href": "How-To Guides/pixi_how_to_guide.html#step-1-install-pixi",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "Go to the official Pixi installation page.\nOn Windows, run:\n\nwinget install prefix-dev.pixi\n\nVerify installation:\n\npixi --version",
+    "crumbs": [
+      "Home",
+      "How-To Guides",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "How-To Guides/pixi_how_to_guide.html#step-2-initialize-a-pixi-environment",
+    "href": "How-To Guides/pixi_how_to_guide.html#step-2-initialize-a-pixi-environment",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "pixi init\nThis command creates a pixi.toml file in the current directory.",
+    "crumbs": [
+      "Home",
+      "How-To Guides",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "How-To Guides/pixi_how_to_guide.html#step-3-add-python-and-pip",
+    "href": "How-To Guides/pixi_how_to_guide.html#step-3-add-python-and-pip",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "pixi add python pip\nThis installs Python and pip from the conda-forge ecosystem.",
+    "crumbs": [
+      "Home",
+      "How-To Guides",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "How-To Guides/pixi_how_to_guide.html#step-4-enter-the-environment",
+    "href": "How-To Guides/pixi_how_to_guide.html#step-4-enter-the-environment",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "pixi shell\nYou are now inside the managed environment.",
+    "crumbs": [
+      "Home",
+      "How-To Guides",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "How-To Guides/pixi_how_to_guide.html#step-5-add-packages",
+    "href": "How-To Guides/pixi_how_to_guide.html#step-5-add-packages",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "Example:\npixi add numpy matplotlib\nOr from PyPI:\npixi add --pypi streamlit",
+    "crumbs": [
+      "Home",
+      "How-To Guides",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "How-To Guides/pixi_how_to_guide.html#step-6-share-the-environment",
+    "href": "How-To Guides/pixi_how_to_guide.html#step-6-share-the-environment",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "Commit or send the pixi.toml and pixi.lock files.\nOthers can recreate the same environment by running:\n\npixi install",
+    "crumbs": [
+      "Home",
+      "How-To Guides",
+      "Matplotlib Introduction"
+    ]
+  },
+  {
+    "objectID": "How-To Guides/pixi_how_to_guide.html#summary",
+    "href": "How-To Guides/pixi_how_to_guide.html#summary",
+    "title": "Matplotlib Introduction",
+    "section": "",
+    "text": "You have successfully created and shared a Python environment using Pixi.",
+    "crumbs": [
+      "Home",
+      "How-To Guides",
       "Matplotlib Introduction"
     ]
   },
@@ -55,72 +311,44 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "",
+    "objectID": "Programming Languages/Python Path/matplotlib/intro.html",
+    "href": "Programming Languages/Python Path/matplotlib/intro.html",
+    "title": "Matplotlib Introduction",
     "section": "",
-    "text": "Code\n\n\n\n\n\n\n\nWelcome to the Learning Platform\n\n\nSimple, beautiful, and effective way to learn.\n\n\n\n\n\n\n\n\n📚 Start Learning Now\n\n\n\n\nTopic A\nTopic B"
-  },
-  {
-    "objectID": "categories.html",
-    "href": "categories.html",
-    "title": "Categories",
-    "section": "",
-    "text": "About\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataFrame Basics\n\n\n\nLanguages\n\nPython Path\n\nPandas\n\nDataFrame\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to Matlab\n\n\n\nLanguages\n\nMatlab\n\nBasics\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to Python\n\n\n\nLanguages\n\nPython Path\n\nBasics\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to R\n\n\n\nLanguages\n\nR\n\nBasics\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nMatplotlib Introduction\n\n\n\nLanguages\n\nPython Path\n\nMatplotlib\n\nVisualization\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nNumPy Introduction\n\n\n\nLanguages\n\nPython Path\n\nNumPy\n\nArrays\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\nPandas Introduction\n\n\n\nLanguages\n\nPython Path\n\nPandas\n\nData Analysis\n\n\n\n\n\n\n\n\n\nDec 6, 2026\n\n\nJane\n\n\n\n\n\n\n\n\n\n\n\n\n📚 Start Learning Now\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Home",
-      "Categories"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site",
-    "crumbs": [
-      "Home",
-      "About"
-    ]
-  },
-  {
-    "objectID": "Programming Languages/Python Path/pandas/DataFrame.html",
-    "href": "Programming Languages/Python Path/pandas/DataFrame.html",
-    "title": "DataFrame Basics",
-    "section": "",
-    "text": "DataFrames\nDataFrames are 2D tables in Pandas…",
+    "text": "Matplotlib Basics\nSimple plots in Matplotlib:\nimport matplotlib.pyplot as plt\n\nplt.plot([1, 2, 3], [4, 5, 6])\nplt.show()",
     "crumbs": [
       "Home",
       "Programming Languages",
       "Python Path",
-      "Pandas",
-      "DataFrame Basics"
+      "Matplotlib",
+      "Matplotlib Introduction"
     ]
   },
   {
-    "objectID": "Programming Languages/Python Path/intro.html",
-    "href": "Programming Languages/Python Path/intro.html",
-    "title": "Intro to Python",
+    "objectID": "Programming Languages/Python Path/numpy/intro.html",
+    "href": "Programming Languages/Python Path/numpy/intro.html",
+    "title": "NumPy Introduction",
     "section": "",
-    "text": "Let us learn Python here",
+    "text": "NumPy Introduction\nNumPy is the foundation for numerical computing in Python.\nimport numpy as np\n\narr = np.array([1, 2, 3, 4])\nprint(arr)",
     "crumbs": [
       "Home",
       "Programming Languages",
       "Python Path",
-      "Intro to Python"
+      "Numpy",
+      "NumPy Introduction"
     ]
   },
   {
-    "objectID": "Programming Languages/Matlab Path/intro.html",
-    "href": "Programming Languages/Matlab Path/intro.html",
-    "title": "Intro to Matlab",
+    "objectID": "Programming Languages/R Path/intro.html",
+    "href": "Programming Languages/R Path/intro.html",
+    "title": "Intro to R",
     "section": "",
-    "text": "Let us learn Matlab here",
+    "text": "Let us learn R here",
     "crumbs": [
       "Home",
       "Programming Languages",
-      "Matlab Path",
-      "Intro to Matlab"
+      "R Path",
+      "Intro to R"
     ]
   }
 ]
