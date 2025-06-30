@@ -1,8 +1,98 @@
 ---
-title: Intro to Python
-categories: [Basics]
+title: Introduction to Python
+categories: [Python Path, Basics]
 author: Jane
-date: 24-06-2025
+date: 30-06-2025
+pyodide:  
+  show-startup-message: true
 ---
 
-Let us learn Python here
+# Introduction to Python Basics
+
+Welcome! This page introduces you to some of the basic building blocks of Python:
+- Variables
+- Arithmetic Operators
+- Conditional Operators
+
+You can run and edit each code block directly in your browser.
+
+---
+
+## Variables in Python
+
+Variables are used to store data. You do not need to declare the type explicitly.
+
+```{pyodide-python}
+name = "Alice"
+age = 25
+height = 1.68
+
+print("Name:", name)
+print("Age:", age)
+print("Height:", height, "meters")
+```
+
+---
+
+## Arithmetic Operators
+
+Python supports standard arithmetic operations:  
+`+`, `-`, `*`, `/`, `//`, `%`, `**`
+
+```{pyodide-python}
+a = 12
+b = 5
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+print("Floor Division:", a // b)
+print("Modulus:", a % b)
+print("Exponentiation:", a ** b)
+```
+
+---
+
+## Conditional (Comparison) Operators
+
+Comparison operators are used to compare values:  
+`==`, `!=`, `>`, `<`, `>=`, `<=`
+
+```{pyodide-python}
+x = 10
+y = 20
+
+print("x == y:", x == y)
+print("x != y:", x != y)
+print("x > y:", x > y)
+print("x < y:", x < y)
+print("x >= y:", x >= y)
+print("x <= y:", x <= y)
+```
+
+---
+
+## Try It Yourself
+
+Edit the values and re-run the code!
+
+```{pyodide-python}
+# Try changing the values below
+a = 15
+b = 4
+
+# What do you expect as output?
+print("a + b =", a + b)
+print("a > b?", a > b)
+```
+
+---
+
+## Summary
+
+- **Variables** store data without explicit type declarations.
+- **Arithmetic operators** let you perform calculations.
+- **Conditional operators** compare values and return `True` or `False`.
+
+You now have the foundation to start writing basic programs in Python!

@@ -38,6 +38,9 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Install extensions
+        run: quarto add coatless-quarto/pyodide
+
       - name: Render Quarto files
         run: quarto render . --output-dir docs
 
